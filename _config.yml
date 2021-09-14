@@ -3,26 +3,31 @@ author: Daniel Raper
 description: > # this means to ignore newlines until "show_exerpts:"
   
 show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: /
+baseurl: 
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
   sass_dir: _sass
 
-permalink: /posts/:title/
+permalink: /:categories/:title:output_ext
+
+
 texture:
   title: Daniel Raper
   tagline: Software Developer and Tinkerer
   date_format: "%b %-d, %Y"
-  style: black
+  style: blue
   showNav: false
-  showPicker: true
+  showPicker: false
 
   # generate social links in footer
   social_links:
+    photography:  https://dan.ms/
     github:  dan-r
-    rss: rss
+    amazon: https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Dalexa-skills&field-keywords=Dan.ms
+    flickr: 114868201@N02
+    email: website@danr.uk
  
 
 # If you want to link only specific pages in your header, uncomment

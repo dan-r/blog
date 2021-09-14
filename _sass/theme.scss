@@ -80,6 +80,8 @@ header {
 		li {
 			color: #fff;
 			float: left;
+			padding-right: 2em;
+
 			i {
 				&:first-child::before {
 					margin-left: 0;
@@ -158,6 +160,13 @@ header {
 		color: $gray;
 		border-bottom: 0;
 	}
+}
+
+.post-thumb {
+	object-fit: cover;
+    width: 100%;
+    height: 20em;
+    margin-top: 1em;
 }
 
 .post-description {

@@ -2,14 +2,23 @@
 	<h1>{{ site.texture.title }}</h1>
 	<h2>{{ site.texture.tagline }}</h2>
 	<ul class="social">
+		{%- if site.texture.social_links.photography -%}
+			<a target="_blank" href="{{ site.texture.social_links.photography }}"><li><i class="icon-camera"></i></li></a>
+		{%- endif -%}
 		{%- if site.texture.social_links.github -%}
-			<a href="https://github.com/{{ site.texture.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
+			<a target="_blank" href="https://github.com/{{ site.texture.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
 		{%- endif -%}
 		{%- if site.texture.social_links.linkedIn -%}
-			<a href="https://linkedin.com/{{ site.texture.social_links.linkedIn }}"><li><i class="icon-linkedin-squared"></i></li></a>
+			<a target="_blank" href="https://linkedin.com/{{ site.texture.social_links.linkedIn }}"><li><i class="icon-linkedin-squared"></i></li></a>
 		{%- endif -%}
-		{%- if site.texture.social_links.twitter -%}
-			<a href="https://twitter.com/{{ site.texture.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
+		{%- if site.texture.social_links.amazon -%}
+			<a target="_blank" href="{{ site.texture.social_links.amazon }}"><li><i class="icon-amazon"></i></li></a>
+		{%- endif -%}
+		{%- if site.texture.social_links.flickr -%}
+			<a target="_blank" href="https://www.flickr.com/photos/{{ site.texture.social_links.flickr }}"><li><i class="icon-flickr"></i></li></a>
+		{%- endif -%}
+		{%- if site.texture.social_links.email -%}
+			<a target="_blank" href="mailto:{{ site.texture.social_links.email }}"><li><i class="icon-email"></i></li></a>
 		{%- endif -%}
 	</ul>
 </div>
