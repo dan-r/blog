@@ -10,7 +10,7 @@ baseurl:
 sass:
   sass_dir: _sass
 
-permalink: /:categories/:title:output_ext
+permalink: /:year/:month/:title:output_ext
 
 
 texture:
@@ -40,4 +40,5 @@ texture:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-category-pages
 #  - jekyll-feed

@@ -103,10 +103,28 @@ header {
 //
 // Basic Container Class
 //
+.container-main {
+	@media screen and  (min-width: 1200px) {
+		display:flex;
+		margin:0 150px;
+	
+	}
+
+	margin:0 15px; 
+
+
+}
+.container-main ul {
+	max-width: 820px;
+	@media screen and  (max-width: 1200px) {
+		
+		padding-bottom:2em;
+	
+	}
+}
 .container {
 	margin:0 150px;
-	max-width: 720px;
-
+	max-width: 820px;
 	div.highlighter-rouge {
 		right: 150px;
 	}
@@ -162,6 +180,12 @@ header {
 	}
 }
 
+.home-title {
+	color: #222;
+	margin: .1em 0;
+
+}
+
 .post-thumb {
 	object-fit: cover;
     width: 100%;
@@ -199,6 +223,26 @@ header {
 			margin-left: 0;
 		}
 	}
+	li > a {
+		color: #000;
+	}
+}
+
+.post-tags-home {
+	list-style-type: none;
+	padding: 0;
+	li {
+		float: left;
+		padding: 10px 20px;
+		background-color: $lightGray;
+		color: #000;
+		margin: 5px;
+		border-radius: 2px;
+		@include fluidType(15px, 17px);
+	}
+	li > a {
+		color: #000;
+	}
 }
 
 .posts {
@@ -213,7 +257,14 @@ header {
 	}
 }
 
-.posts, .post-container {
+.sidebar {
+	padding:0;
+	@media screen and  (min-width: 1200px) {
+		margin-right:3em;
+	}
+}
+
+.posts, .post-container, .sidebar {
 	margin-top: 40px;
 }
 
@@ -265,3 +316,8 @@ header {
 	}
 }
 
+
+
+.posts h1 {
+	margin-top: 0;
+}

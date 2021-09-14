@@ -1,5 +1,7 @@
 <div class="container">
-	<h1>{{ site.texture.title }}</h1>
+	{{ include.content }}
+
+	<h1><a target="_blank" href="https://card.danr.uk/">{{ site.texture.title }}</a></h1>
 	<h2>{{ site.texture.tagline }}</h2>
 	<ul class="social">
 		{%- if site.texture.social_links.photography -%}

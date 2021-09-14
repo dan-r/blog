@@ -74,34 +74,22 @@
     }
 }
 
-.texture-red {
+h1 a {
+    color: #fff;
 }
 
-.texture-purple {
+
+.all-posts-arrow {
+    position:absolute;
+    top:1.5em;
+   
 }
-
-.texture-green {
-
-    .post-date {
-        color: #ccc;
-    }
-}
-
-.texture-red,
-.texture-purple {
-    h2 {
-        color: #ccc;
-    }
-
-    .social i {
-        color: #ddd;
-
-        &:hover {
-            color: lighten(#ddd, 7%);
-        }
-    }
-
-    .post-date {
-        color: #ddd;
-    }
+.all-posts-arrow a {
+    color: #ccc;
+	transition: color .3s ease;
+	margin: .1em 0;
+	&:hover {
+		color: $gray;
+		border-bottom: 0;
+	}
 }
