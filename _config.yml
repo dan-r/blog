@@ -20,6 +20,7 @@ texture:
   style: blue
   showNav: false
   showPicker: false
+  disqus_shortname: danr
 
   # generate social links in footer
   social_links:
