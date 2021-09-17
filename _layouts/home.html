@@ -6,7 +6,7 @@ layout: page
 	<h2 class="home-title">Categories</h2>
 	<ul class="post-tags-home">
 	{% for category in site.categories %}
-		<li><a href="/category/{{ category | first | slugify }}/">{{ category | first }}</a></li>
+		<li><a href="/category/{{ category | first | slugify | replace: '-','+' }}/">{{ category | first }}</a></li>
 	{% endfor %}
 	</ul>
 </ul>
@@ -21,7 +21,9 @@ layout: page
 			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
 		</div>
 		<div class="post">
+			{%- if post.image -%}
 			<img class="post-thumb" src="{{ post.image }}" />
+			{%- endif -%}
 			{%- if site.show_excerpts -%}
 			{{ post.excerpt }}
 			{%- endif -%}

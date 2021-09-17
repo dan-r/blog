@@ -8,7 +8,7 @@
 	</div>
 	<ul class="post-tags">
 		{%- for tag in page.categories -%}
-			<li><a href="/category/{{ tag | slugify }}/">{{ tag }}</a></li>
+			<li><a href="/category/{{ tag | slugify | replace: '-','+' }}/">{{ tag }}</a></li>
 		{%- endfor -%}
 	</ul>
 </div>
