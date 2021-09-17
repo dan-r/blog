@@ -1,9 +1,10 @@
-title: Daniel Raper - Blog
+title: Daniel Raper
 author: Daniel Raper
 description: > # this means to ignore newlines until "show_exerpts:"
   
 show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: 
+url: https://danr.uk
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
