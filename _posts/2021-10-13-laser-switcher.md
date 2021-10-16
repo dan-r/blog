@@ -19,13 +19,16 @@ My solution to this was a simple 3D printed switcher, allowing me to maintain th
 - 1x Miniature SPST Rocker Switch
 - 1x SPST Toggle Switch
 - 1x 12mm SPST Key Switch
+- 1x 2.2kΩ Resistor
 
 The parts for this build are all available both locally (in the UK at least) and from China. I haven't provided any links as listings often change and these can all be found fairly easily.
 
 ## Schematic
-![Schematic](/images/2021-10-13-Fritzing.png)
+![Schematic](/images/2021-10-13-Fritzing2.png)
 
 The SPST toggle switch is wired to the fan header of the 3D printer. I used a JST cable extension, but you can splice an existing cable or crimp your own connectors if you'd prefer. I did the same for the two outputs.
+
+The 2.2kΩ resistor is the suggested value when using a 24v power supply with a standard 3mm red LED (2v forward voltage, 10ma current). You may prefer to [calculate your own resistor value](https://ohmslawcalculator.com/led-resistor-calculator).
 
 ## Conclusion
 This interlock requires a key input and two switches to activate the laser. This is intended to prevent any case of accidental activation, whether by pets or family. Many key switches of this size provide no real 'security', and the one I used was easily switched by a screwdriver. I only mention this to reiterate that this is only intended to prevent accidental activation.
