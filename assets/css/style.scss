@@ -84,6 +84,7 @@ h1 a {
     top:1.5em;
    
 }
+
 .all-posts-arrow a {
     color: #ccc;
 	transition: color .3s ease;
@@ -92,4 +93,8 @@ h1 a {
 		color: $gray;
 		border-bottom: 0;
 	}
+}
+
+.post-imagelink {
+    border: 0 !important;
 }

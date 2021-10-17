@@ -28,7 +28,9 @@ layout: page
             </div>
             <div class="post">
                 {%- if post.image -%}
-                <img class="post-thumb" src="{{ post.image }}" />
+                <a class="post-imagelink" href="{{ post.url | relative_url }}">
+                  <img class="post-thumb" src="{{ post.image }}" />
+                </a>
                 {%- endif -%}
                 {%- if site.show_excerpts -%}
                 {{ post.excerpt }}
@@ -64,7 +66,9 @@ layout: page
         </div>
         <div class="post">
             {%- if post.image -%}
-            <img class="post-thumb" src="{{ post.image }}" />
+            <a class="post-imagelink" href="{{ post.url | relative_url }}">
+              <img class="post-thumb" src="{{ post.image }}" />
+            </a>
             {%- endif -%}
             {%- if site.show_excerpts -%}
             {{ post.excerpt }}
