@@ -105,9 +105,9 @@ header {
 //
 .container-main {
 	@media screen and  (min-width: 1200px) {
-		display:flex;
-		margin:0 150px;
-	
+		display: flex;
+		margin: 0;
+		width: 100%;
 	}
 
 	margin:0 15px; 
@@ -123,7 +123,7 @@ header {
 	}
 }
 .container {
-	margin:0 150px;
+	margin: auto;
 	max-width: 820px;
 	div.highlighter-rouge {
 		right: 150px;
@@ -255,16 +255,43 @@ header {
 			border-bottom: 1px solid $lightGray;
 		}
 	}
+	margin: auto;
 }
 
 .sidebar {
 	padding:0;
-	@media screen and  (min-width: 1200px) {
-		margin-right:3em;
+	margin-top: 40px;
+	@media screen and  (max-width: 1600px) {
+		margin: auto;
+		max-width: 820px;
+		margin-top:40px;
 	}
 }
 
-.posts, .post-container, .sidebar {
+.container-sidebar {
+	padding:0;
+	margin-top: 0;
+	
+
+	@media screen and  (min-width: 1600px) {
+		margin-right:3em;
+	height: 0;
+		
+		width: 25vw;
+		float: left;
+		display: inline;
+		padding-left: 4.5em;
+	
+	}
+	@media screen and  (max-width: 1600px) {
+		margin-bottom: 5em;
+		margin-left: 15px;
+		width: 100%;
+	
+	}
+}
+
+.posts, .post-container {
 	margin-top: 40px;
 }
 

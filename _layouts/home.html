@@ -1,37 +1,40 @@
 ---
 layout: page
 ---
-{%- if site.posts.size > 0 -%}
-<ul class="sidebar">
-	<h2 class="home-title">Categories</h2>
-	<ul class="post-tags-home">
-	{% for category in site.categories %}
-		<li><a href="/category/{{ category | first | slugify | replace: '-','+' }}/">{{ category | first }}</a></li>
-	{% endfor %}
+<div class="container-sidebar">
+	<ul class="sidebar">
+		<h2 class="home-title">Categories</h2>
+		<ul class="post-tags-home">
+		{% for category in site.categories %}
+			<li><a href="/category/{{ category | first | slugify | replace: '-','+' }}/">{{ category | first }}</a></li>
+		{% endfor %}
+		</ul>
 	</ul>
-</ul>
-<ul class="posts">
-	{%- for post in site.posts -%}
-	<li>
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		<div class="post-meta">
-			<a class="post-link" href="{{ post.url | relative_url }}">
-				<h2 class="post-title">{{ post.title | escape }}</h2>
-			</a>
-			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
-		</div>
-		<div class="post">
-			{%- if post.image -%}
-			<a class="post-imagelink" href="{{ post.url | relative_url }}">
-				<img class="post-thumb" src="{{ post.image }}" />
-			</a>
-			{%- endif -%}
-			{%- if site.show_excerpts -%}
-			{{ post.excerpt }}
-			{%- endif -%}
-		</div>
-	</li>
-	{%- endfor -%}
-</ul>
-{%- endif -%}
-
+</div>
+<div class="container-main">
+	{%- if site.posts.size > 0 -%}
+	<ul class="posts">
+		{%- for post in site.posts -%}
+		<li>
+			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			<div class="post-meta">
+				<a class="post-link" href="{{ post.url | relative_url }}">
+					<h2 class="post-title">{{ post.title | escape }}</h2>
+				</a>
+				<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
+			</div>
+			<div class="post">
+				{%- if post.image -%}
+				<a class="post-imagelink" href="{{ post.url | relative_url }}">
+					<img class="post-thumb" src="{{ post.image }}" />
+				</a>
+				{%- endif -%}
+				{%- if site.show_excerpts -%}
+				{{ post.excerpt }}
+				{%- endif -%}
+			</div>
+		</li>
+		{%- endfor -%}
+	</ul>
+	{%- endif -%}
+</div>
